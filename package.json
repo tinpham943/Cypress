@@ -4,7 +4,8 @@
   "description": "first test with cypress",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules\\.bin\\cypress run"
+    "test": "node_modules\\.bin\\cypress run",
+    "runtests": "npm run test --"
   },
   "author": "Tinpham",
   "license": "ISC",
