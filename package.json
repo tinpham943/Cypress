@@ -10,10 +10,11 @@
   "author": "Tinpham",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.1.0",
+    "cypress": "^4.3.0",
     "cypress-xpath": "^1.4.0"
   },
   "dependencies": {
+    "minimist": "^1.2.5",
     "tesseract.js": "^2.0.2"
   }
 }
