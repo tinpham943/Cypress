@@ -2,11 +2,13 @@
 import loginPage from '../../fixtures/PageObject/LoginPage'
 
 describe('Testcase for Login feature', function() {
+
     beforeEach(function () {
         Cypress.on('uncaught:exception', (err, runnable) => {
-            throw err
+            throw err   
           })
       })
+
     const lp = new loginPage()
    
     it('Verify Cursor start at Username', function(){
