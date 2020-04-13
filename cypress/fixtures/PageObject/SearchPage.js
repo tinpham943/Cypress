@@ -21,19 +21,21 @@ class SearchPage {
         cy.get(this.txtMinPrice).type(min)
         cy.get(this.txtMaxPrice).type(max)
     }
+    waitXHR(path){
+        cy.server()
+        cy.route(path).as('results')
+        cy.wait('@results')
+    }
 
     enterLocation(where, radius) {
         cy.get(this.txtLocation).type(where)
-        cy.wait(2000)
         cy.get('.sc-1fhohx-0').contains(where).click()
-        cy.wait(2000)
         cy.get(this.cboRadius).trigger('mouseover').select(radius)
 
     }
 
     sort(by) {
-        cy.get(this.cboSortby).select(by)
-        cy.wait(5000)
+        cy.get(this.cboSortby).select(by)      
         cy.get(this.lstItems)
             .find("article:contains('CHF')")
             .its('length').should('eq', 20)

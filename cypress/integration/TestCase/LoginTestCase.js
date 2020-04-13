@@ -11,7 +11,10 @@ describe('Testcase for Login feature', function() {
 
     const lp = new loginPage()
    
-   
+    // it('Verify Cursor start at Username', function() {
+    //     lp.visitLoginPage();
+    //     lp.checkCursorIsFocused(lp.txtEmail);
+    //   })
 
     it('Verify error message displayed', function(){
         lp.visitLoginPage()
