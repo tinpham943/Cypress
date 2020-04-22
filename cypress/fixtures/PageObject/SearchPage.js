@@ -21,12 +21,6 @@ class SearchPage {
         cy.get(this.txtMinPrice).type(min)
         cy.get(this.txtMaxPrice).type(max)
     }
-    waitXHR(type,path){
-        var x = "\""
-        cy.server()
-        cy.route({method: type, url: x+path+x}).as('results')
-        cy.wait('@results')
-    }
 
     enterLocation(where, radius) {
         cy.get(this.txtLocation).type(where)    
