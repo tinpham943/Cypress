@@ -31,6 +31,7 @@ class SearchPage {
 
     sort(by) {    
         cy.get(this.cboSortby).select(by)
+        cy.wait(3000)
         cy.get(this.lstItems)
             .find("article:contains('CHF')")
             .its('length').should('eq', 20)
